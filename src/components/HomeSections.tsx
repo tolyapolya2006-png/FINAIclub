@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 import { siteConfig } from "@/config/site";
 import { ActivitiesGrid } from "@/components/ActivitiesGrid";
 
@@ -81,7 +79,6 @@ function AboutSection() {
           <span><b>04</b>Обмен знаниями</span>
         </div>
       </div>
-      <RibbonFragment className="ribbon-fragment ribbon-fragment--about" />
     </section>
   );
 }
@@ -142,7 +139,6 @@ function CommunityPartnershipSection() {
           </button>
         </article>
       </div>
-      <RibbonFragment className="ribbon-fragment ribbon-fragment--community" />
     </section>
   );
 }
@@ -167,14 +163,6 @@ function CommunityButton() {
       Присоединиться к сообществу
       <span aria-hidden="true">↗</span>
     </a>
-  );
-}
-
-function RibbonFragment({ className }: { className: string }) {
-  return (
-    <div className={className} aria-hidden="true">
-      <Image src="/assets/hero-ribbon.png" alt="" fill sizes="360px" />
-    </div>
   );
 }
 

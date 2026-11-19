@@ -479,18 +479,6 @@ button { color: inherit; font: inherit; }
 .community-card > p { max-width: 510px; margin: 18px 0 0; font-size: 15px; line-height: 1.42; }
 .community-card .button { margin-top: 28px; }
 
-.ribbon-fragment {
-  position: absolute;
-  width: 360px;
-  aspect-ratio: 1;
-  pointer-events: none;
-  opacity: 0.8;
-}
-
-.ribbon-fragment img { width: 100%; height: 100%; object-fit: contain; }
-.ribbon-fragment--about { right: -140px; bottom: -220px; transform: rotate(14deg); }
-.ribbon-fragment--community { left: -150px; bottom: -230px; transform: rotate(-18deg); }
-
 .site-footer {
   border-top: 1px solid var(--line);
   padding-block: 28px;
@@ -522,8 +510,6 @@ button { color: inherit; font: inherit; }
   .community-card--partnership { margin-top: 42px; padding-top: 42px; border-top: 1px solid var(--line); }
   .community-card > p { font-size: 14px; }
   .site-footer__inner { align-items: flex-start; flex-direction: column; gap: 8px; }
-  .ribbon-fragment--about { display: none; }
-  .ribbon-fragment--community { left: auto; right: -160px; bottom: -210px; }
 }
 
 @media (max-width: 430px) {
