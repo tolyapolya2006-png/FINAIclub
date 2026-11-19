@@ -220,7 +220,7 @@ button { color: inherit; font: inherit; }
   position: absolute;
   z-index: 1;
   top: 50%;
-  right: -3%;
+  right: -80px;
   width: min(66vw, 860px);
   aspect-ratio: 1;
   transform: translateY(-62%);
@@ -280,7 +280,7 @@ button { color: inherit; font: inherit; }
 
   .ribbon-graphic {
     top: 9%;
-    right: -105%;
+    right: -135%;
     width: 145vw;
     transform: translateY(0);
     opacity: 0.98;
@@ -302,7 +302,7 @@ button { color: inherit; font: inherit; }
   .hero__description { max-width: 260px; font-size: 12px; }
   .hero__actions { align-items: flex-start; flex-direction: column; }
 
-  .ribbon-graphic { top: 8%; right: -116%; width: 145vw; }
+  .ribbon-graphic { top: 8%; right: -140%; width: 145vw; }
 }
 
 @media (prefers-reduced-motion: reduce) {

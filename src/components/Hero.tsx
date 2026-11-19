@@ -6,7 +6,6 @@ import { siteConfig } from "@/config/site";
 export function Hero() {
   return (
     <section className="hero" aria-labelledby="hero-title">
-      <RibbonGraphic />
       <div className="hero__inner">
         <div className="hero__copy">
           <h1 id="hero-title" className="hero__title">
@@ -28,6 +27,7 @@ export function Hero() {
             </Link>
           </div>
         </div>
+        <RibbonGraphic />
       </div>
     </section>
   );
