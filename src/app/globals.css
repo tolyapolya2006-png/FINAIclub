@@ -93,7 +93,7 @@ button { color: inherit; font: inherit; }
   align-items: center;
   gap: clamp(16px, 2.1vw, 34px);
   color: var(--muted);
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 500;
   white-space: nowrap;
 }
@@ -220,8 +220,8 @@ button { color: inherit; font: inherit; }
   position: absolute;
   z-index: 1;
   top: 50%;
-  right: -8%;
-  width: min(71vw, 900px);
+  right: -3%;
+  width: min(66vw, 860px);
   aspect-ratio: 1;
   transform: translateY(-62%);
   pointer-events: none;
@@ -270,17 +270,17 @@ button { color: inherit; font: inherit; }
   }
 
   .hero__inner { min-height: 0; align-items: flex-start; }
-  .hero__copy { width: min(74%, 330px); padding-block: 58px 46px; }
+  .hero__copy { width: min(68%, 300px); padding-block: 58px 46px; }
   .hero__title { font-size: clamp(66px, 18vw, 98px); }
   .hero__tagline { margin-top: 18px; font-size: clamp(22px, 6.3vw, 30px); }
   .hero__subhead { max-width: 260px; margin-top: 12px; font-size: 15px; }
-  .hero__description { max-width: 290px; margin-top: 12px; font-size: 13px; }
-  .hero__actions { gap: 9px; margin-top: 24px; }
+  .hero__description { max-width: 250px; margin-top: 12px; font-size: 13px; }
+  .hero__actions { width: 292px; gap: 9px; margin-top: 24px; }
   .hero__actions .button { min-height: 42px; padding-inline: 15px; font-size: 11px; }
 
   .ribbon-graphic {
     top: 9%;
-    right: -130%;
+    right: -105%;
     width: 145vw;
     transform: translateY(0);
     opacity: 0.98;
@@ -295,14 +295,14 @@ button { color: inherit; font: inherit; }
   .site-header__inner { min-height: 72px; }
   .hero { min-height: 0; }
   .hero__inner { min-height: 0; }
-  .hero__copy { width: 78%; padding-top: 58px; }
+  .hero__copy { width: 68%; padding-top: 58px; }
   .hero__title { font-size: clamp(64px, 19vw, 82px); }
   .hero__tagline { max-width: 220px; }
   .hero__subhead { max-width: 250px; font-size: 14px; }
   .hero__description { max-width: 260px; font-size: 12px; }
   .hero__actions { align-items: flex-start; flex-direction: column; }
 
-  .ribbon-graphic { top: 8%; right: -124%; width: 145vw; }
+  .ribbon-graphic { top: 8%; right: -116%; width: 145vw; }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -453,10 +453,17 @@ button { color: inherit; font: inherit; }
 }
 
 .activity-card p { position: relative; z-index: 1; max-width: 260px; margin: 0; color: var(--muted); font-size: 13px; line-height: 1.38; }
-.activity-card:hover, .activity-card.is-active { border-color: var(--ink); background: var(--ink); color: var(--paper); }
-.activity-card:hover::after, .activity-card.is-active::after { opacity: 0.9; }
-.activity-card:hover .activity-card__number, .activity-card.is-active .activity-card__number { color: var(--lavender); }
-.activity-card:hover p, .activity-card.is-active p { color: color-mix(in srgb, var(--paper) 78%, transparent); }
+.activity-card.is-active { border-color: var(--ink); background: var(--ink); color: var(--paper); }
+.activity-card.is-active::after { opacity: 0.9; }
+.activity-card.is-active .activity-card__number { color: var(--lavender); }
+.activity-card.is-active p { color: color-mix(in srgb, var(--paper) 78%, transparent); }
+
+@media (min-width: 901px) {
+  .activity-card:hover { border-color: var(--ink); background: var(--ink); color: var(--paper); }
+  .activity-card:hover::after { opacity: 0.9; }
+  .activity-card:hover .activity-card__number { color: var(--lavender); }
+  .activity-card:hover p { color: color-mix(in srgb, var(--paper) 78%, transparent); }
+}
 
 .community-section { padding-bottom: 84px; }
 
@@ -487,8 +494,8 @@ button { color: inherit; font: inherit; }
 .site-footer {
   border-top: 1px solid var(--line);
   padding-block: 28px;
-  background: var(--ink);
-  color: var(--paper);
+  background: var(--paper);
+  color: var(--ink);
 }
 
 .site-footer__inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; font-size: 11px; }
@@ -515,7 +522,7 @@ button { color: inherit; font: inherit; }
   .community-card--partnership { margin-top: 42px; padding-top: 42px; border-top: 1px solid var(--line); }
   .community-card > p { font-size: 14px; }
   .site-footer__inner { align-items: flex-start; flex-direction: column; gap: 8px; }
-  .ribbon-fragment--about { right: -150px; bottom: -190px; }
+  .ribbon-fragment--about { display: none; }
   .ribbon-fragment--community { left: auto; right: -160px; bottom: -210px; }
 }
 

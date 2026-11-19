@@ -17,6 +17,8 @@ export function ActivitiesGrid({ activities }: ActivitiesGridProps) {
   const cardRefs = useRef<Array<HTMLElement | null>>([]);
 
   useEffect(() => {
+    if (!window.matchMedia("(max-width: 900px)").matches) return;
+
     const cards = cardRefs.current.filter(Boolean) as HTMLElement[];
     if (!cards.length || !("IntersectionObserver" in window)) return;
 
