@@ -8,6 +8,7 @@ export function RibbonGraphic() {
         alt=""
         fill
         priority
+        loading="eager"
         sizes="(max-width: 767px) 115vw, (max-width: 1280px) 64vw, 780px"
         className="ribbon-graphic__image"
       />

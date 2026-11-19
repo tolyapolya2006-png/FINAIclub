@@ -1,5 +1,6 @@
 import { siteConfig } from "@/config/site";
 import { ActivitiesGrid } from "@/components/ActivitiesGrid";
+import Image from "next/image";
 
 const activities = [
   {
@@ -78,6 +79,7 @@ function AboutSection() {
           <span><b>03</b>Свобода участия</span>
           <span><b>04</b>Обмен знаниями</span>
         </div>
+        <RibbonFragment variant="about-mobile" />
       </div>
     </section>
   );
@@ -137,9 +139,24 @@ function CommunityPartnershipSection() {
             Обсудить сотрудничество
             <span aria-hidden="true">↗</span>
           </button>
+          <RibbonFragment variant="partnership" />
         </article>
       </div>
     </section>
+  );
+}
+
+function RibbonFragment({ variant }: { variant: "about-mobile" | "partnership" }) {
+  return (
+    <div className={`ribbon-fragment ribbon-fragment--${variant}`} aria-hidden="true">
+      <Image
+        src="/assets/hero-ribbon.png"
+        alt=""
+        fill
+        sizes="(max-width: 900px) 90vw, 420px"
+        className="ribbon-fragment__image"
+      />
+    </div>
   );
 }
 
