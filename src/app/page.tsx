@@ -1,5 +1,6 @@
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
+import { HomeSections } from "@/components/HomeSections";
 
 export default function Home() {
   return (
@@ -7,10 +8,7 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
-        <span id="about" className="anchor-target" aria-hidden="true" />
-        <span id="activities" className="anchor-target" aria-hidden="true" />
-        <span id="community" className="anchor-target" aria-hidden="true" />
-        <span id="partners" className="anchor-target" aria-hidden="true" />
+        <HomeSections />
       </main>
     </>
   );

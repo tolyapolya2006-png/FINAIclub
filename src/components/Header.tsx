@@ -13,6 +13,11 @@ export function Header() {
       <div className="site-header__inner">
         <Link className="brand" href="/" onClick={() => setMenuOpen(false)}>
           <span className="brand__name">FU AI Club</span>
+          <span className="brand__descriptor">
+            Студенческое AI-сообщество
+            <br />
+            Финансового университета.
+          </span>
         </Link>
 
         <nav className="desktop-nav" aria-label="Основная навигация">

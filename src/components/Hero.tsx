@@ -9,13 +9,13 @@ export function Hero() {
       <RibbonGraphic />
       <div className="hero__inner">
         <div className="hero__copy">
-          <p className="hero__kicker">Студенческое AI-сообщество Финансового университета.</p>
           <h1 id="hero-title" className="hero__title">
             FU AI
             <br />
             Club
           </h1>
           <p className="hero__tagline">Изучай и Практикуй.</p>
+          <p className="hero__subhead">Студенческое AI-сообщество Финансового университета.</p>
           <p className="hero__description">
             Изучаем искусственный интеллект, экспериментируем с технологиями, создаём собственные
             проекты и объединяем людей, которым интересно будущее AI.
