@@ -388,6 +388,14 @@ button { color: inherit; font: inherit; }
   line-height: 1.2;
 }
 
+.principles b {
+  display: block;
+  margin-bottom: 7px;
+  color: var(--violet);
+  font-size: 11px;
+  font-weight: 600;
+}
+
 .principles span + span { border-left: 1px solid var(--line); }
 
 .activities-heading {
@@ -408,15 +416,31 @@ button { color: inherit; font: inherit; }
 }
 
 .activity-card {
+  position: relative;
+  overflow: hidden;
   min-height: 260px;
   padding: 22px;
+  border: 1px solid var(--line);
   border-radius: 16px;
   background: var(--surface);
+  transition: background-color 300ms ease, color 300ms ease, border-color 300ms ease;
 }
 
-.activity-card--dark { background: var(--ink); color: var(--paper); }
-.activity-card__number { color: var(--violet); font-size: 12px; font-weight: 600; }
-.activity-card--dark .activity-card__number { color: var(--lavender); }
+.activity-card::after {
+  position: absolute;
+  right: -42px;
+  bottom: -62px;
+  width: 180px;
+  height: 150px;
+  background: url('/assets/hero-ribbon.png') center / contain no-repeat;
+  content: '';
+  opacity: 0;
+  transform: rotate(-12deg);
+  transition: opacity 300ms ease;
+}
+
+.activity-card__number { position: relative; z-index: 1; color: var(--violet); font-size: 12px; font-weight: 600; }
+.activity-card__arrow { position: absolute; z-index: 1; bottom: 19px; left: 22px; font-size: 22px; line-height: 1; }
 .activity-card svg { display: block; margin-top: 34px; color: currentColor; }
 
 .activity-card h3 {
@@ -428,8 +452,11 @@ button { color: inherit; font: inherit; }
   line-height: 1.02;
 }
 
-.activity-card p { max-width: 260px; margin: 0; color: var(--muted); font-size: 13px; line-height: 1.38; }
-.activity-card--dark p { color: color-mix(in srgb, var(--paper) 78%, transparent); }
+.activity-card p { position: relative; z-index: 1; max-width: 260px; margin: 0; color: var(--muted); font-size: 13px; line-height: 1.38; }
+.activity-card:hover, .activity-card.is-active { border-color: var(--ink); background: var(--ink); color: var(--paper); }
+.activity-card:hover::after, .activity-card.is-active::after { opacity: 0.9; }
+.activity-card:hover .activity-card__number, .activity-card.is-active .activity-card__number { color: var(--lavender); }
+.activity-card:hover p, .activity-card.is-active p { color: color-mix(in srgb, var(--paper) 78%, transparent); }
 
 .community-section { padding-bottom: 84px; }
 
@@ -479,8 +506,8 @@ button { color: inherit; font: inherit; }
   .principles span:nth-child(4) { border-top: 1px solid var(--line); }
   .activities-heading { gap: 18px; margin-bottom: 26px; }
   .activities-heading > p { font-size: 14px; }
-  .activity-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
-  .activity-card { min-height: 188px; padding: 18px; border-radius: 13px; }
+  .activity-grid { grid-template-columns: 1fr; gap: 12px; }
+  .activity-card { min-height: 210px; padding: 18px; border-radius: 13px; }
   .activity-card svg { margin-top: 23px; }
   .activity-card h3 { margin-top: 14px; font-size: 20px; }
   .activity-card p { font-size: 12px; }
@@ -495,7 +522,7 @@ button { color: inherit; font: inherit; }
 @media (max-width: 430px) {
   .section-shell { width: calc(100% - 32px); }
   .about-section, .activities-section, .community-section { padding-block: 48px; }
-  .activity-grid { grid-template-columns: 1fr 1fr; }
+  .activity-grid { grid-template-columns: 1fr; }
   .activity-card { min-height: 174px; }
   .activity-card svg { width: 24px; height: 24px; margin-top: 19px; }
   .activity-card h3 { margin-top: 10px; font-size: 17px; }

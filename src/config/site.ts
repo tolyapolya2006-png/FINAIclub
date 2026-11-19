@@ -4,10 +4,7 @@ export const siteConfig = {
 };
 
 export const navigation = [
-  { label: "О клубе", href: "/#about" },
-  { label: "Что мы делаем", href: "/#activities" },
+  { label: "Главная", href: "/" },
   { label: "Мероприятия", href: "/events" },
-  { label: "Сообщество", href: "/#community" },
-  { label: "Партнёрство", href: "/#partners" },
 ] as const;
 

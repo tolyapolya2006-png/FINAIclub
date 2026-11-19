@@ -1,6 +1,7 @@
 import Image from "next/image";
 
 import { siteConfig } from "@/config/site";
+import { ActivitiesGrid } from "@/components/ActivitiesGrid";
 
 const activities = [
   {
@@ -74,10 +75,10 @@ function AboutSection() {
           </div>
         </div>
         <div className="principles" aria-label="Принципы FU AI Club">
-          <span>Открытое сообщество</span>
-          <span>Практика и реальные проекты</span>
-          <span>Эксперты индустрии</span>
-          <span>Бесплатное участие</span>
+          <span><b>01</b>Открыто для всех</span>
+          <span><b>02</b>Практика и эксперименты</span>
+          <span><b>03</b>Свобода участия</span>
+          <span><b>04</b>Обмен знаниями</span>
         </div>
       </div>
       <RibbonFragment className="ribbon-fragment ribbon-fragment--about" />
@@ -99,33 +100,10 @@ function ActivitiesSection() {
             найти интересный для себя формат.
           </p>
         </div>
-        <div className="activity-grid">
-          {activities.map((activity, index) => (
-            <article className={`activity-card${index === 1 ? " activity-card--dark" : ""}`} key={activity.number}>
-              <span className="activity-card__number">{activity.number}</span>
-              <ActivityIcon index={index} />
-              <h3>{activity.title}</h3>
-              <p>{activity.description}</p>
-            </article>
-          ))}
-        </div>
+        <ActivitiesGrid activities={activities} />
       </div>
     </section>
   );
-}
-
-function ActivityIcon({ index }: { index: number }) {
-  const common = { width: 30, height: 30, viewBox: "0 0 30 30", fill: "none", "aria-hidden": true as const };
-  if (index === 0) {
-    return <svg {...common}><path d="m15 4 10 5-10 5L5 9l10-5Z" stroke="currentColor" strokeWidth="1.8"/><path d="m5 14 10 5 10-5M5 19l10 5 10-5" stroke="currentColor" strokeWidth="1.8"/></svg>;
-  }
-  if (index === 1) {
-    return <svg {...common}><path d="m11 8-6 7 6 7M19 8l6 7-6 7M17 6l-4 18" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/></svg>;
-  }
-  if (index === 2) {
-    return <svg {...common}><path d="m17 3-9 13h7l-2 11 9-14h-7l2-10Z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round"/></svg>;
-  }
-  return <svg {...common}><path d="M8 12h14v11H8zM11 12V8h8v4M5 16h3m14 0h3M12 23v3m6-3v3" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/><path d="M12 17h6" stroke="currentColor" strokeWidth="1.8"/></svg>;
 }
 
 function CommunityPartnershipSection() {
