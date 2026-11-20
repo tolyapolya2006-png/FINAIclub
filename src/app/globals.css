@@ -473,7 +473,7 @@ button { color: inherit; font: inherit; }
 .activity-card__ribbon {
   position: absolute;
   right: -28px;
-  bottom: -12px;
+  bottom: -28px;
   display: block;
   width: clamp(180px, 68%, 220px);
   height: auto;
@@ -536,7 +536,7 @@ button { color: inherit; font: inherit; }
   .activity-card__decoration { min-height: 56px; }
   .activity-card__ribbon {
     right: -24px;
-    bottom: -8px;
+    bottom: -18px;
     width: clamp(130px, 58%, 180px);
   }
   .community-card, .community-card--partnership { padding: 0; border-left: 0; }
