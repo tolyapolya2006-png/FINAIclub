@@ -149,10 +149,11 @@ function RibbonFragment({ variant }: { variant: "partnership" }) {
   return (
     <div className={`ribbon-fragment ribbon-fragment--${variant}`} aria-hidden="true">
       <Image
-        src="/assets/hero-ribbon.png"
+        src="/assets/partnership-ribbon.png"
         alt=""
-        fill
-        sizes="(max-width: 900px) 90vw, 420px"
+        width={1881}
+        height={836}
+        sizes="(max-width: 900px) 320px, 460px"
         className="ribbon-fragment__image"
       />
     </div>

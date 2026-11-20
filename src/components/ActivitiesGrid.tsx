@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
 type Activity = {
@@ -56,7 +57,16 @@ export function ActivitiesGrid({ activities }: ActivitiesGridProps) {
           <ActivityIcon index={index} />
           <h3>{activity.title}</h3>
           <p>{activity.description}</p>
-          <span className="activity-card__arrow" aria-hidden="true">↗</span>
+          <div className="activity-card__decoration" aria-hidden="true">
+            <Image
+              src="/assets/card-ribbon.png"
+              alt=""
+              width={2172}
+              height={724}
+              sizes="(max-width: 900px) 150px, 180px"
+              className="activity-card__ribbon"
+            />
+          </div>
         </article>
       ))}
     </div>
