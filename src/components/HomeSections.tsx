@@ -138,8 +138,8 @@ function CommunityPartnershipSection() {
             Обсудить сотрудничество
             <span aria-hidden="true">↗</span>
           </button>
-          <RibbonFragment variant="partnership" />
         </article>
+        <RibbonFragment variant="partnership" />
       </div>
     </section>
   );
@@ -147,14 +147,14 @@ function CommunityPartnershipSection() {
 
 function RibbonFragment({ variant }: { variant: "partnership" }) {
   return (
-    <div className={`ribbon-fragment ribbon-fragment--${variant}`} aria-hidden="true">
+    <div className={`community-ribbon-zone community-ribbon-zone--${variant}`} aria-hidden="true">
       <Image
         src="/assets/partnership-ribbon.png"
         alt=""
         width={1881}
         height={836}
         sizes="(max-width: 900px) 320px, 460px"
-        className="ribbon-fragment__image"
+        className="community-ribbon-zone__image"
       />
     </div>
   );

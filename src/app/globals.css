@@ -398,25 +398,22 @@ button { color: inherit; font: inherit; }
 
 .principles span + span { border-left: 1px solid var(--line); }
 
-.ribbon-fragment {
+.community-ribbon-zone {
+  grid-column: 1 / -1;
+  display: flex;
   position: relative;
+  width: min(100%, 640px);
+  margin: 24px 0 0 auto;
+  justify-content: flex-start;
   pointer-events: none;
 }
 
-.ribbon-fragment__image {
+.community-ribbon-zone__image {
   display: block;
   width: clamp(320px, 72%, 460px);
   height: auto;
   object-fit: contain;
-}
-
-.ribbon-fragment--partnership {
-  position: relative;
-  z-index: 0;
-  display: flex;
-  justify-content: flex-end;
-  margin: 24px -32px 0 auto;
-  opacity: 0.88;
+  opacity: 0.9;
 }
 
 .activities-heading {
@@ -463,17 +460,22 @@ button { color: inherit; font: inherit; }
 
 .activity-card p { position: relative; z-index: 1; max-width: 260px; margin: 0; color: var(--muted); font-size: 13px; line-height: 1.38; }
 .activity-card__decoration {
+  position: relative;
   display: flex;
-  min-height: 74px;
+  min-height: 92px;
   margin-top: auto;
   align-items: flex-end;
   justify-content: flex-end;
+  overflow: visible;
   opacity: 0;
   transition: opacity 300ms ease;
 }
 .activity-card__ribbon {
+  position: absolute;
+  right: -28px;
+  bottom: -12px;
   display: block;
-  width: clamp(140px, 62%, 180px);
+  width: clamp(180px, 68%, 220px);
   height: auto;
   object-fit: contain;
   object-position: right bottom;
@@ -499,8 +501,7 @@ button { color: inherit; font: inherit; }
 }
 
 .community-card { position: relative; padding-right: clamp(32px, 5vw, 80px); }
-.community-card--partnership { position: relative; overflow: hidden; padding-right: 0; padding-left: clamp(32px, 5vw, 80px); border-left: 1px solid var(--line); }
-.community-card--partnership > *:not(.ribbon-fragment) { position: relative; z-index: 1; }
+.community-card--partnership { padding-right: 0; padding-left: clamp(32px, 5vw, 80px); border-left: 1px solid var(--line); }
 .community-card .section-title { max-width: 470px; font-size: clamp(32px, 3.8vw, 52px); }
 .community-card > p { max-width: 510px; margin: 18px 0 0; font-size: 15px; line-height: 1.42; }
 .community-card .button { margin-top: 28px; }
@@ -532,18 +533,22 @@ button { color: inherit; font: inherit; }
   .activity-card svg { margin-top: 23px; }
   .activity-card h3 { margin-top: 14px; font-size: 20px; }
   .activity-card p { font-size: 12px; }
-  .activity-card__decoration { min-height: 58px; }
-  .activity-card__ribbon { width: clamp(110px, 52%, 150px); }
+  .activity-card__decoration { min-height: 56px; }
+  .activity-card__ribbon {
+    right: -24px;
+    bottom: -8px;
+    width: clamp(130px, 58%, 180px);
+  }
   .community-card, .community-card--partnership { padding: 0; border-left: 0; }
   .community-card--partnership { margin-top: 42px; padding-top: 42px; border-top: 1px solid var(--line); }
-  .ribbon-fragment--partnership {
+  .community-ribbon-zone {
+    grid-column: 1;
     position: relative;
-    right: auto;
-    bottom: auto;
     width: 100%;
     margin: 24px 0 -26px;
-    opacity: 0.9;
-    transform: none;
+  }
+  .community-ribbon-zone__image {
+    width: clamp(220px, 80vw, 320px);
   }
   .community-card > p { font-size: 14px; }
   .site-footer__inner { align-items: flex-start; flex-direction: column; gap: 8px; }
@@ -558,5 +563,5 @@ button { color: inherit; font: inherit; }
   .activity-card h3 { margin-top: 10px; font-size: 17px; }
   .activity-card p { display: none; }
   .principles span { min-height: 58px; padding: 14px 12px; font-size: 12px; }
-  .ribbon-fragment--partnership { margin-top: 20px; }
+  .community-ribbon-zone { margin-top: 20px; }
 }
