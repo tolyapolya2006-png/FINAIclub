@@ -149,7 +149,7 @@ function RibbonFragment({ variant }: { variant: "partnership" }) {
   return (
     <div className={`community-ribbon-zone community-ribbon-zone--${variant}`} aria-hidden="true">
       <Image
-        src="/assets/partnership-ribbon.png"
+        src="/assets/partnership-ribbon-integrated.png"
         alt=""
         width={1881}
         height={836}
