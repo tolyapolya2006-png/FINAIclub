@@ -79,7 +79,6 @@ function AboutSection() {
           <span><b>03</b>Свобода участия</span>
           <span><b>04</b>Обмен знаниями</span>
         </div>
-        <RibbonFragment variant="about-mobile" />
       </div>
     </section>
   );
@@ -146,7 +145,7 @@ function CommunityPartnershipSection() {
   );
 }
 
-function RibbonFragment({ variant }: { variant: "about-mobile" | "partnership" }) {
+function RibbonFragment({ variant }: { variant: "partnership" }) {
   return (
     <div className={`ribbon-fragment ribbon-fragment--${variant}`} aria-hidden="true">
       <Image
